@@ -24,3 +24,6 @@ const animate = function () {
 }
 
 animate()
+
+window.THREE = THREE
+window.scene = scene
