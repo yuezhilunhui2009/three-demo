@@ -33,12 +33,11 @@ module.exports = {
     entry,
     devtool: DEV_MODE ? 'cheap-module-eval-source-map' : 'cheap-module-source-map',
     devServer: {
-        contentBase: './dist'
+        contentBase: '.'
     },
     output: {
         filename: `[name].[chunkhash].js`,
-        path: path.resolve(__dirname, 'dist'),
-        publicPath: DEV_MODE ? '.' : ''
+        path: path.resolve(__dirname, 'dist')
     },
     module: {
         rules: [
