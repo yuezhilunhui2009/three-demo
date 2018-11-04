@@ -10,7 +10,7 @@ npm i
 npm run serve
 ```
 
-## 术语
+## Three.js 术语
 * [场景（Scene）](https://threejs.org/docs/index.html#api/zh/scenes/Scene)
 * [摄像机（Camera）](https://threejs.org/docs/index.html#api/zh/cameras/Camera)
 * [WebGL渲染器（WebGLRenderer）](https://threejs.org/docs/index.html#api/zh/renderers/WebGLRenderer)
@@ -20,3 +20,10 @@ npm run serve
 * [材质(Material)](https://threejs.org/docs/index.html#api/zh/materials/Material)
 * [网格（Mesh）](https://threejs.org/docs/index.html#api/zh/objects/Mesh)
 * [着色器（Shader）](https://zh.wikipedia.org/wiki/%E7%9D%80%E8%89%B2%E5%99%A8)
+
+## 工具
+* [3D 模型编辑、查看工具 Blender](https://www.blender.org/download/)
+
+## 3D 模型资源
+* [glTF Sample Models](https://github.com/KhronosGroup/glTF-Sample-Models)
+

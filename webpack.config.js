@@ -49,7 +49,7 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(png|svg|jpg|gif)$/,
+                test: /\.(png|svg|jpg|gif|bin|gltf)$/,
                 use: [
                     'file-loader'
                 ]
@@ -60,6 +60,13 @@ module.exports = {
                 loader: 'babel-loader'
             }
         ]
+    },
+    resolve: {
+        alias: {
+            '@libs': path.resolve(__dirname, 'libs/'),
+            '@fonts': path.resolve(__dirname, 'assets/fonts/'),
+            '@models': path.resolve(__dirname, 'assets/models/')
+        }
     },
     optimization: {
         splitChunks: {
