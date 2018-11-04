@@ -23,7 +23,9 @@ npm run serve
 
 ## 工具
 * [3D 模型编辑、查看工具 Blender](https://www.blender.org/download/)
+* [gltf 查看工具](https://github.com/donmccurdy/three-gltf-viewer)
 
 ## 3D 模型资源
 * [glTF Sample Models](https://github.com/KhronosGroup/glTF-Sample-Models)
+* [sketchfab](https://sketchfab.com/features/download)
 
