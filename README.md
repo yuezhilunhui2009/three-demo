@@ -66,12 +66,26 @@ npm run serve
 - [x] 使用 [dat-gui](https://github.com/dataarts/dat.gui) 辅助数值调试
 
 ### 辅助对象示例
-- [ ] 箭头与坐标轴 ArrowHelper、AxesHelper
-- [ ] 包围盒 BoxHelper、Box3Helper
-- [ ] 模拟相机视锥体 CameraHelper
+- [x] 箭头与坐标轴 ArrowHelper、AxesHelper
+- [x] 包围盒 BoxHelper、Box3Helper
+- [x] 模拟相机视锥体 CameraHelper
 
 ### 几何体示例
+- [ ] 立方几何体（BoxGeometry）
+- [ ] 圆形几何体（CircleGeometry）
+- [ ] 圆锥几何体（ConeGeometry）
+- [ ] 十二面几何体（DodecahedronGeometry）
+- [ ] 边缘几何体（EdgesGeometry）
+- [ ] 挤压几何体（ExtrudeGeometry）
+- [ ] 二十面几何体（IcosahedronGeometry）
+- [ ] 车削几何体（LatheGeometry）
+- [ ] 八面几何体（OctahedronGeometry）
+- [ ] 多面几何体（PolyhedronGeometry）
+- [ ] 八面几何体（OctahedronGeometry）
+
 ### 材质、光源示例
+- [x] 粒子材质
+
 ### 粒子系统示例
 ### 交互示例
 ### 动画示例
