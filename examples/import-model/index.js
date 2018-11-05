@@ -3,6 +3,12 @@
 import * as THREE from 'three'
 import '@libs/GLTFLoader'
 import '@libs/OrbitControls'
+import Stats from '@libs/stats'
+
+// 其他工具
+const stats = new Stats()
+stats.showPanel(0)
+document.body.appendChild(stats.dom)
 
 // 场景
 const scene = new THREE.Scene()
@@ -49,7 +55,10 @@ gltfLoader.load('assets/models/DamagedHelmet/DamagedHelmet.gltf', (gltfModel) =>
 // 渲染动画
 const animate = function () {
     window.requestAnimationFrame(animate)
+
+    stats.begin()
     renderer.render(scene, camera)
+    stats.end()
 }
 animate()
 

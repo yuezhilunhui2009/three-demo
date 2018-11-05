@@ -1,4 +1,10 @@
 import * as THREE from 'three'
+import Stats from '@libs/stats'
+
+// 其他工具
+const stats = new Stats()
+stats.showPanel(0)
+document.body.appendChild(stats.dom)
 
 // 场景
 const scene = new THREE.Scene()
@@ -43,6 +49,7 @@ scene.add(line3)
 const animate = () => {
     window.requestAnimationFrame(animate)
 
+    stats.begin()
     line.rotation.x += 0.01
     line.rotation.y += 0.01
 
@@ -53,6 +60,7 @@ const animate = () => {
     line3.rotation.y += 0.01
 
     renderer.render(scene, camera)
+    stats.end()
 }
 animate()
 

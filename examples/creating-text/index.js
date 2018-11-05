@@ -1,4 +1,10 @@
 import * as THREE from 'three'
+import Stats from '@libs/stats'
+
+// 其他工具
+const stats = new Stats()
+stats.showPanel(0)
+document.body.appendChild(stats.dom)
 
 // 字体加载器
 const fontLoader = new THREE.FontLoader()
@@ -8,7 +14,7 @@ const scene = new THREE.Scene()
 
 // 摄像机
 const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000)
-camera.position.z = 5
+camera.position.z = 20
 
 // 渲染器
 const renderer = new THREE.WebGLRenderer()
@@ -19,7 +25,7 @@ fontLoader.load('assets/fonts/optimer_regular.typeface.json', (font) => {
     // 几何体
     const geometry = new THREE.TextGeometry('Hello world!', {
         font,
-        size: 4,
+        size: 2,
         height: 0.5
     })
     // 材质
@@ -32,9 +38,11 @@ fontLoader.load('assets/fonts/optimer_regular.typeface.json', (font) => {
     // 渲染
     const animate = function () {
         window.requestAnimationFrame(animate)
-        textMesh.rotation.y += 0.01
 
+        stats.begin()
+        textMesh.rotation.y += 0.01
         renderer.render(scene, camera)
+        stats.end()
     }
     animate()
 })

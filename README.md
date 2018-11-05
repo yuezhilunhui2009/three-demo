@@ -39,8 +39,8 @@ npm run serve
 - [x] 加载 glTF 模型、使用轨道控制器
 
 ### 辅助工具示例
-- [ ] 使用 [stats.js](https://github.com/mrdoob/stats.js) 展示渲染性能
-- [ ] 使用 [dat-gui](https://github.com/dataarts/dat.gui) 辅助数值调试
+- [x] 使用 [stats.js](https://github.com/mrdoob/stats.js) 展示渲染性能
+- [x] 使用 [dat-gui](https://github.com/dataarts/dat.gui) 辅助数值调试
 
 ### 辅助对象示例
 - [ ] 箭头与坐标轴 ArrowHelper、AxesHelper

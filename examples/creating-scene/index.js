@@ -1,4 +1,19 @@
 import * as THREE from 'three'
+import Stats from '@libs/stats'
+import * as dat from 'dat.gui'
+
+// 其他工具 - 展示 fps
+const stats = new Stats()
+stats.showPanel(0)
+document.body.appendChild(stats.dom)
+
+// 其他工具 - 提供 UI 进行变量调整
+const guiControl = { rotationSpeed: 0.01 }
+const gui = new dat.GUI()
+gui.domElement.style.position = 'absolute'
+gui.domElement.style.right = '0'
+gui.add(guiControl, 'rotationSpeed', 0.001, 0.1)
+document.body.appendChild(gui.domElement)
 
 // 场景
 const scene = new THREE.Scene()
@@ -26,10 +41,12 @@ scene.add(cube)
 const animate = function () {
     window.requestAnimationFrame(animate)
 
-    cube.rotation.x += 0.01
-    cube.rotation.y += 0.01
+    stats.begin()
+    cube.rotation.x += guiControl.rotationSpeed
+    cube.rotation.y += guiControl.rotationSpeed
 
     renderer.render(scene, camera)
+    stats.end()
 }
 animate()
 

@@ -1,5 +1,11 @@
 import * as THREE from 'three'
 import '@libs/OrbitControls'
+import Stats from '@libs/stats'
+
+// 其他工具
+const stats = new Stats()
+stats.showPanel(0)
+document.body.appendChild(stats.dom)
 
 // 字体加载器
 const fontLoader = new THREE.FontLoader()
@@ -30,9 +36,11 @@ scene.add(cube)
 const animate = function () {
     window.requestAnimationFrame(animate)
 
+    stats.begin()
     cube.rotation.y += 0.01
 
     renderer.render(scene, camera)
+    stats.end()
 }
 animate()
 

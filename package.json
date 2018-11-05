@@ -46,6 +46,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.1.2",
+    "dat.gui": "^0.7.3",
     "three": "^0.98.0",
     "three-gltf-loader": "^1.98.0"
   },
