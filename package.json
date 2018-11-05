@@ -2,7 +2,6 @@
   "name": "three-demo",
   "version": "1.0.0",
   "description": "learning three.js",
-  "main": ".eslintrc.js",
   "directories": {
     "example": "examples"
   },

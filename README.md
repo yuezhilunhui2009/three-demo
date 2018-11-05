@@ -22,15 +22,14 @@ npm run serve
 2. 然后在子文件夹内创建 index.js 即可开始编写代码
 3. 重新运行 npm run serve
 
-## 内置库
+## 项目已安装的库
 ### 核心部分
 * 3D引擎: [three.js r98](https://threejs.org/)
-* 可视化给变量赋值: [dat.gui](https://github.com/dataarts/dat.gui)
+* 变量 UI 调试组件: [dat.gui](https://github.com/dataarts/dat.gui)
 * 帧率展示: [stats.js](https://github.com/mrdoob/stats.js)
 * 缓动库: [tween.js](https://github.com/tweenjs/tween.js/blob/master/docs/user_guide.md)
 
 ### 加载器部分
-
 * gltf 模型加载器: [GLTFLoader.js](https://github.com/mrdoob/three.js/blob/dev/examples/js/loaders/GLTFLoader.js)
 * obj 模型加载器: [OBJLoader.js](https://github.com/mrdoob/three.js/blob/dev/examples/js/loaders/OBJLoader.js)
 * obj 模型加载器: [OBJLoader2.js](https://github.com/mrdoob/three.js/blob/dev/examples/js/loaders/OBJLoader2.js)
