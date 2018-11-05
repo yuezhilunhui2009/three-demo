@@ -1,7 +1,7 @@
 # three-demo
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-模仿官方示例或者文档写的 demo，本项目也可以作为项目模板 clone 到本地帮助快速使用 ES6 编写 demo。
+模仿 [three.js 官方示例](https://threejs.org/examples/)或者[文档](https://threejs.org/docs/index.html#manual/en/introduction/Creating-a-scene)写的 demo，本项目也可以作为项目模板 clone 到本地帮助快速使用 ES6 编写 demo。
 
 ## 快速开始
 ```bash
