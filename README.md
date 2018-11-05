@@ -37,15 +37,16 @@ npm run serve
 - [x] 加载 glTF 模型、使用轨道控制器
 
 ### 辅助工具示例
-- [] 使用 [stats.js](https://github.com/mrdoob/stats.js) 展示渲染性能
-- [] 使用 [dat-gui](https://github.com/dataarts/dat.gui) 辅助数值调试
+- [ ] 使用 [stats.js](https://github.com/mrdoob/stats.js) 展示渲染性能
+- [ ] 使用 [dat-gui](https://github.com/dataarts/dat.gui) 辅助数值调试
 
 ### 辅助对象示例
-- [] 箭头与坐标轴 ArrowHelper、AxesHelper
-- [] 包围盒 BoxHelper、Box3Helper
-- [] 模拟相机视锥体 CameraHelper
+- [ ] 箭头与坐标轴 ArrowHelper、AxesHelper
+- [ ] 包围盒 BoxHelper、Box3Helper
+- [ ] 模拟相机视锥体 CameraHelper
 
 ### 几何体示例
 ### 材质、光源示例
 ### 粒子系统示例
+### 交互示例
 ### 动画示例
