@@ -9,7 +9,6 @@
   "scripts": {
     "serve": "webpack-dev-server --open --mode development",
     "watch": "webpack --watch",
-    "build": "webpack --mode production",
     "lint:fix": "eslint --fix ./examples/ ./webpack.config.js ./babel.config.js",
     "lint": "eslint ./examples/ webpack.config.js ./babel.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -46,6 +45,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.1.2",
+    "@tweenjs/tween.js": "^17.2.0",
     "dat.gui": "^0.7.3",
     "three": "^0.98.0",
     "three-gltf-loader": "^1.98.0"
