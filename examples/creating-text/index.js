@@ -8,7 +8,7 @@ const scene = new THREE.Scene()
 
 // 摄像机
 const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000)
-camera.position.z = 50
+camera.position.z = 5
 
 // 渲染器
 const renderer = new THREE.WebGLRenderer()
@@ -19,14 +19,14 @@ fontLoader.load('assets/fonts/optimer_regular.typeface.json', (font) => {
     // 几何体
     const geometry = new THREE.TextGeometry('Hello world!', {
         font,
-        size: 2,
+        size: 4,
         height: 0.5
     })
     // 材质
-    const meterial = new THREE.MeshBasicMaterial({ color: 0xff0000 })
+    const material = new THREE.MeshBasicMaterial({ color: 0xff0000 })
 
     // 物体 - 网格
-    const textMesh = new THREE.Mesh(geometry, meterial)
+    const textMesh = new THREE.Mesh(geometry, material)
     scene.add(textMesh)
 
     // 渲染
