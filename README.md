@@ -29,3 +29,23 @@ npm run serve
 * [glTF Sample Models](https://github.com/KhronosGroup/glTF-Sample-Models)
 * [sketchfab](https://sketchfab.com/features/download)
 
+## TODO
+### 基本示例
+- [x] 创建场景、绘制简单几何体、模型旋转
+- [x] 绘制线条
+- [x] 加载字体、绘制文本
+- [x] 加载 glTF 模型、使用轨道控制器
+
+### 辅助工具示例
+- [] 使用 [stats.js](https://github.com/mrdoob/stats.js) 展示渲染性能
+- [] 使用 [dat-gui](https://github.com/dataarts/dat.gui) 辅助数值调试
+
+### 辅助对象示例
+- [] 箭头与坐标轴 ArrowHelper、AxesHelper
+- [] 包围盒 BoxHelper、Box3Helper
+- [] 模拟相机视锥体 CameraHelper
+
+### 几何体示例
+### 材质、光源示例
+### 粒子系统示例
+### 动画示例
