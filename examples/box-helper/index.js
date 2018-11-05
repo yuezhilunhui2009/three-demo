@@ -32,11 +32,20 @@ document.body.appendChild(renderer.domElement)
 const geometry = new THREE.BoxGeometry(1, 1, 1)
 
 // 材质
-const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 })
+const material = new THREE.MeshLambertMaterial({ color: 0x00ff00 })
 
 // 物体 - 网格
 const cube = new THREE.Mesh(geometry, material)
 scene.add(cube)
+
+// 光源 - 环境光
+const ambientLight = new THREE.AmbientLight(0x666666)
+scene.add(ambientLight)
+
+// 光源 - 聚光灯
+const spotLight = new THREE.SpotLight(0xffffff)
+spotLight.position.set(2, 2, 2)
+scene.add(spotLight)
 
 // 渲染动画
 const animate = function () {

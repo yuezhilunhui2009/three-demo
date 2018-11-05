@@ -53,39 +53,3 @@ npm run serve
 * [模型 glTF Sample Models](https://github.com/KhronosGroup/glTF-Sample-Models)
 * [模型 sketchfab](https://sketchfab.com/features/download)
 * [模型 turbosquid](https://www.turbosquid.com/)
-
-## TODO
-### 基本示例
-- [x] 创建场景、绘制简单几何体、模型旋转
-- [x] 绘制线条
-- [x] 加载字体、绘制文本
-- [x] 加载 glTF 模型、使用轨道控制器
-
-### 辅助工具示例
-- [x] 使用 [stats.js](https://github.com/mrdoob/stats.js) 展示渲染性能
-- [x] 使用 [dat-gui](https://github.com/dataarts/dat.gui) 辅助数值调试
-
-### 辅助对象示例
-- [x] 箭头与坐标轴 ArrowHelper、AxesHelper
-- [x] 包围盒 BoxHelper、Box3Helper
-- [x] 模拟相机视锥体 CameraHelper
-
-### 几何体示例
-- [ ] 立方几何体（BoxGeometry）
-- [ ] 圆形几何体（CircleGeometry）
-- [ ] 圆锥几何体（ConeGeometry）
-- [ ] 十二面几何体（DodecahedronGeometry）
-- [ ] 边缘几何体（EdgesGeometry）
-- [ ] 挤压几何体（ExtrudeGeometry）
-- [ ] 二十面几何体（IcosahedronGeometry）
-- [ ] 车削几何体（LatheGeometry）
-- [ ] 八面几何体（OctahedronGeometry）
-- [ ] 多面几何体（PolyhedronGeometry）
-- [ ] 八面几何体（OctahedronGeometry）
-
-### 材质、光源示例
-- [x] 粒子材质
-
-### 粒子系统示例
-### 交互示例
-### 动画示例

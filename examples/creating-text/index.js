@@ -21,15 +21,24 @@ const renderer = new THREE.WebGLRenderer()
 renderer.setSize(window.innerWidth, window.innerHeight)
 document.body.appendChild(renderer.domElement)
 
+// 光源 - 环境光
+const ambientLight = new THREE.AmbientLight(0x666666)
+scene.add(ambientLight)
+
+// 光源 - 聚光灯
+const spotLight = new THREE.SpotLight(0xffffff)
+spotLight.position.set(2, 2, 2)
+scene.add(spotLight)
+
 fontLoader.load('assets/fonts/optimer_regular.typeface.json', (font) => {
     // 几何体
     const geometry = new THREE.TextGeometry('Hello world!', {
         font,
-        size: 2,
+        size: 1,
         height: 0.5
     })
     // 材质
-    const material = new THREE.MeshBasicMaterial({ color: 0xff0000 })
+    const material = new THREE.MeshLambertMaterial({ color: 0xff0000 })
 
     // 物体 - 网格
     const textMesh = new THREE.Mesh(geometry, material)
