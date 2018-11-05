@@ -1,5 +1,6 @@
 # three-demo
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+
 模仿官方示例或者文档写的 demo，本项目也可以作为项目模板 clone 到本地帮助快速使用 ES6 编写 demo。
 
 ## 快速开始
@@ -10,7 +11,7 @@ npm i
 # 本地预览
 npm run serve
 
-# 路径别名
+# 项目路径别名
 # @libs - 工具库路径
 # @fonts - 字体路径
 # @models - 模型路径
