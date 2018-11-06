@@ -46,6 +46,20 @@ npm run serve
 * 轨迹球控制器: [TrackballControls.js](https://github.com/mrdoob/three.js/blob/dev/examples/js/controls/TrackballControls.js)
 * 物体控制器: [TransformControls.js](https://github.com/mrdoob/three.js/blob/dev/examples/js/controls/TransformControls.js)
 
+### 后期处理器
+* [EffectComposer.js](https://github.com/mrdoob/three.js/blob/master/examples/js/postprocessing/EffectComposer.js)
+* [MaskPass.js](https://github.com/mrdoob/three.js/blob/master/examples/js/postprocessing/MaskPass.js)
+* [RenderPass.js](https://github.com/mrdoob/three.js/blob/master/examples/js/postprocessing/RenderPass.js)
+* [BloomPass.js](https://github.com/mrdoob/three.js/blob/master/examples/js/postprocessing/BloomPass.js)
+* [ShaderPass.js](https://github.com/mrdoob/three.js/blob/master/examples/js/postprocessing/ShaderPass.js)
+* [FilmPass.js](https://github.com/mrdoob/three.js/blob/master/examples/js/postprocessing/FilmPass.js)
+
+### Shaders
+* [ConvolutionShader.js](https://raw.githubusercontent.com/mrdoob/three.js/master/examples/js/shaders/ConvolutionShader.js)
+* [CopyShader.js](https://github.com/mrdoob/three.js/blob/master/examples/js/shaders/CopyShader.js)
+* [FilmShader.js](https://github.com/mrdoob/three.js/blob/master/examples/js/shaders/FilmShader.js)
+* [FocusShader.js](https://github.com/mrdoob/three.js/blob/master/examples/js/shaders/FocusShader.js)
+
 ## 其他资源
 * [3D 模型编辑、查看工具 Blender](https://www.blender.org/download/)
 * [gltf 查看工具](https://github.com/donmccurdy/three-gltf-viewer)
