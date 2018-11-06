@@ -15,6 +15,7 @@ npm run serve
 # @libs - 工具库路径
 # @fonts - 字体路径
 # @models - 模型路径
+# @images - 图片路径
 ```
 
 ## 如何添加 example

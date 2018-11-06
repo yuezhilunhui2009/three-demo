@@ -26,15 +26,23 @@ document.body.appendChild(renderer.domElement)
 const geometry = new THREE.Geometry()
 for (var i = 0; i < 10000; i++) {
     let star = new THREE.Vector3()
-    star.x = THREE.Math.randFloatSpread(2000)
-    star.y = THREE.Math.randFloatSpread(2000)
-    star.z = THREE.Math.randFloatSpread(2000)
+    star.x = THREE.Math.randFloatSpread(1000)
+    star.y = THREE.Math.randFloatSpread(1000)
+    star.z = THREE.Math.randFloatSpread(1000)
 
     geometry.vertices.push(star)
 }
 
 // 材质
-const material = new THREE.PointsMaterial({ color: 0xffffff })
+const material = new THREE.PointsMaterial({
+    size: 3,
+    transparent: true,
+    opacity: true,
+    map: THREE.ImageUtils.loadTexture('assets/images/snow.jpg'),
+    blending: THREE.AdditiveBlending,
+    sizeAttenuation: true,
+    color: 0xffffff
+})
 
 // 物体 - 网格
 const cube = new THREE.Points(geometry, material)
@@ -45,8 +53,12 @@ const animate = function () {
     window.requestAnimationFrame(animate)
 
     stats.begin()
-    // cube.rotation.z += 0.001
+    geometry.vertices.forEach(v => {
+        v.y = v.y - 1
 
+        if (v.y < -500) v.y = 500
+    })
+    geometry.verticesNeedUpdate = true
     renderer.render(scene, camera)
     stats.end()
 }
