@@ -83,13 +83,13 @@ const animate = function () {
     window.requestAnimationFrame(animate)
 
     stats.begin()
-    scene.traverse(function (e) {
-        if (e instanceof THREE.Mesh && e != plane) {
-            e.rotation.x += 0.01;
-            e.rotation.y += 0.01;
-            e.rotation.z += 0.01;
+    scene.traverse(e => {
+        if (e instanceof THREE.Mesh && e !== plane) {
+            e.rotation.x += 0.01
+            e.rotation.y += 0.01
+            e.rotation.z += 0.01
         }
-    });
+    })
     renderer.render(scene, camera)
     stats.end()
 }
