@@ -53,6 +53,10 @@ mtlLoader.load('Pony_cartoon.mtl', function (materials) {
     objLoader.setMaterials(materials)
     objLoader.setPath(MODEL_PATH)
     objLoader.load('Pony_cartoon.obj', function (object) {
+        const box = new THREE.Box3()
+        // 通过传入的object3D对象来返回当前模型的最小大小，值可以使一个mesh也可以使group
+        box.expandByObject(object)
+        console.log(box.getBoundingSphere())
         scene.add(object)
     })
 })
@@ -99,7 +103,7 @@ scene.add(ambientLight)
 
 // 光源 - 聚光灯
 const spotLight = new THREE.SpotLight(0xffffff)
-spotLight.position.set(0, 1000, 0)
+spotLight.position.set(0, 2000, 0)
 scene.add(spotLight)
 
 // 渲染动画
