@@ -9,15 +9,15 @@ document.body.appendChild(stats.dom)
 // 场景
 const scene = new THREE.Scene()
 
-// 摄像机
-const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 500)
-camera.position.set(0, 0, 50)
-camera.lookAt(0, 0, 0)
-
 // 渲染器
 const renderer = new THREE.WebGLRenderer()
 renderer.setSize(window.innerWidth, window.innerHeight)
 document.body.appendChild(renderer.domElement)
+
+// 摄像机
+const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 500)
+camera.position.set(0, 0, 50)
+camera.lookAt(0, 0, 0)
 
 // 几何体
 const geometry = new THREE.Geometry()

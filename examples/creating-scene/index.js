@@ -18,14 +18,14 @@ document.body.appendChild(gui.domElement)
 // 场景
 const scene = new THREE.Scene()
 
-// 摄像机
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000)
-camera.position.z = 5
-
 // 渲染器
 const renderer = new THREE.WebGLRenderer()
 renderer.setSize(window.innerWidth, window.innerHeight)
 document.body.appendChild(renderer.domElement)
+
+// 摄像机
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000)
+camera.position.z = 5
 
 // 几何体
 const geometry = new THREE.BoxGeometry(1, 1, 1)

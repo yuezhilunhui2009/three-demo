@@ -19,6 +19,13 @@ document.body.appendChild(gui.domElement)
 // 场景
 const scene = new THREE.Scene()
 
+// 渲染器
+const renderer = new THREE.WebGLRenderer()
+// renderer.setClearColor(new THREE.Color(0xeeeeee, 1.0))
+renderer.setSize(window.innerWidth, window.innerHeight)
+renderer.shadowMapEnabled = true
+document.body.appendChild(renderer.domElement)
+
 // 雾化
 scene.fog = new THREE.Fog(0xffffff, 1, 90)
 
@@ -28,13 +35,6 @@ camera.position.x = -30
 camera.position.y = 40
 camera.position.z = 30
 camera.lookAt(scene.position)
-
-// 渲染器
-const renderer = new THREE.WebGLRenderer()
-// renderer.setClearColor(new THREE.Color(0xeeeeee, 1.0))
-renderer.setSize(window.innerWidth, window.innerHeight)
-renderer.shadowMapEnabled = true
-document.body.appendChild(renderer.domElement)
 
 // 添加一个平面
 const planeGeometry = new THREE.PlaneGeometry(60, 40, 1, 1)
