@@ -1,8 +1,11 @@
 import * as dat from 'dat.gui'
 import { addObject3DGUI } from './Object3DGUI'
 import { addLightGUI } from './LightGUI'
+import { addSpotLightGUI } from './SpotLightGUI'
+import { addPerspectiveCameraGUI } from './PerspectiveCameraGUI'
 
-const addGUI = () => {
+// 添加 GUI
+const createGUI = () => {
     const gui = new dat.GUI()
     gui.domElement.style.position = 'absolute'
     gui.domElement.style.right = '0'
@@ -12,7 +15,9 @@ const addGUI = () => {
 }
 
 export {
-    addGUI,
+    createGUI,
     addObject3DGUI,
-    addLightGUI
+    addLightGUI,
+    addSpotLightGUI,
+    addPerspectiveCameraGUI
 }

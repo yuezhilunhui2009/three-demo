@@ -1,3 +1,4 @@
+import * as THREE from 'three'
 import { Object3DGUI, addObject3DGUI, genObject3DGUIParams } from './Object3DGUI'
 
 export class LightGUI extends Object3DGUI {
@@ -21,7 +22,7 @@ export class LightGUI extends Object3DGUI {
 export const genLightGUIParams = () => ({
     ...genObject3DGUIParams(),
     color: { default: 0xffffff },
-    intensity: { default: 0, min: -50, max: 50, step: 0.01 }
+    intensity: { default: 1, min: 0, max: 50, step: 0.001 }
 })
 
 export const addLightGUI = (gui, light, params = genLightGUIParams()) => {
@@ -36,9 +37,9 @@ export const addLightGUI = (gui, light, params = genLightGUIParams()) => {
     const intensityControl = folder.add(lightGUI, 'intensity', params.z.min, params.z.max, params.z.step)
 
     if (light) {
-        colorControl.onChange(v => (light.color = v))
+        colorControl.onChange(v => (light.color = new THREE.Color(v)))
         intensityControl.onChange(v => (light.intensity = v))
     }
 
-    return lightGUI
+    return { lightGUI, folder }
 }
