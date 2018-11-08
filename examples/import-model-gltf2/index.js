@@ -28,16 +28,6 @@ gltfLoader.load('assets/models/tiki_treasure/scene.gltf', (gltfModel) => {
     scene.add(gltfModel.scene)
 })
 
-// 渲染动画
-const animate = function () {
-    window.requestAnimationFrame(animate)
-
-    stats.begin()
-    renderer.render(scene, camera)
-    stats.end()
-}
-animate()
-
 // 轨道控制器
 const controls = new THREE.OrbitControls(camera)
 controls.target.set(0, -15000, 0)
@@ -46,3 +36,12 @@ controls.update()
 // 暴露给调试工具
 window.THREE = THREE
 window.scene = scene
+
+// 渲染动画
+const animate = function () {
+    stats.begin()
+    renderer.render(scene, camera)
+    stats.end()
+    window.requestAnimationFrame(animate)
+}
+animate()

@@ -27,13 +27,14 @@ npm run serve
 ### 核心部分
 * 3D引擎: [three.js r98](https://threejs.org/)
 * 变量 UI 调试组件: [dat.gui](https://github.com/dataarts/dat.gui)
-* 帧率展示: [stats.js](https://github.com/mrdoob/stats.js)
+* 性能面板1: [stats.js](https://github.com/mrdoob/stats.js)
+* 性能面板2: [rstatsjs](https://github.com/spite/rstats)
 * 缓动库: [tween.js](https://github.com/tweenjs/tween.js/blob/master/docs/user_guide.md)
 
 ### 加载器部分
 * gltf 模型加载器: [GLTFLoader.js](https://github.com/mrdoob/three.js/blob/dev/examples/js/loaders/GLTFLoader.js)
 * obj 模型加载器: [OBJLoader.js](https://github.com/mrdoob/three.js/blob/dev/examples/js/loaders/OBJLoader.js)
-* obj 模型加载器: [OBJLoader2.js](https://github.com/mrdoob/three.js/blob/dev/examples/js/loaders/OBJLoader2.js)
+* MTL 材质加载器: [MTLLoader.js](https://github.com/mrdoob/three.js/blob/dev/examples/js/loaders/MTLLoader.js)
 
 ### 控制器部分
 * 设备旋转控制器: [DeviceOrientationControls.js](https://github.com/mrdoob/three.js/blob/dev/examples/js/controls/DeviceOrientationControls.js)
