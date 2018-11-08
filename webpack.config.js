@@ -65,7 +65,8 @@ module.exports = {
         alias: {
             '@libs': path.resolve(__dirname, 'libs/'),
             '@fonts': path.resolve(__dirname, 'assets/fonts/'),
-            '@models': path.resolve(__dirname, 'assets/models/')
+            '@models': path.resolve(__dirname, 'assets/models/'),
+            '@utils': path.resolve(__dirname, 'utils/')
         }
     },
     optimization: {
