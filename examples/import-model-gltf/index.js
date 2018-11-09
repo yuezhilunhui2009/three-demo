@@ -4,11 +4,15 @@ import * as THREE from 'three'
 import '@libs/GLTFLoader'
 import '@libs/OrbitControls'
 import Stats from '@libs/stats'
+import * as myGUI from '@utils/myGUI'
 
 // 其他工具
 const stats = new Stats()
 stats.showPanel(0)
 document.body.appendChild(stats.dom)
+
+// gui
+const gui = myGUI.createGUI()
 
 // 场景
 const scene = new THREE.Scene()
@@ -22,11 +26,16 @@ document.body.appendChild(renderer.domElement)
 // 摄像机
 const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.25, 20)
 camera.position.set(-1.8, 0.9, 2.7)
+camera.name = 'camera'
+myGUI.addPerspectiveCameraGUI(gui, camera)
 
 // 光源
 const light = new THREE.HemisphereLight(0xbbbbff, 0x444422)
+light.name = 'HemisphereLight'
 light.position.set(0, 1, 0)
 scene.add(light)
+scene.add(light)
+myGUI.addLightGUI(gui, light)
 
 // 加载背景贴图
 const envMap = new THREE.CubeTextureLoader()
@@ -49,8 +58,13 @@ gltfLoader.load('assets/models/DamagedHelmet/DamagedHelmet.gltf', (gltfModel) =>
             child.material.envMap = envMap
         }
     })
+    myGUI.addObject3DGUI(gui, gltfModel.scene)
     scene.add(gltfModel.scene)
 })
+
+// 辅助线
+const axesHelper = new THREE.AxesHelper(100)
+scene.add(axesHelper)
 
 // 渲染动画
 const animate = function () {

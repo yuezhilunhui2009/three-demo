@@ -37,7 +37,7 @@ npm run serve
 * obj 模型加载器: [OBJLoader.js](https://github.com/mrdoob/three.js/blob/dev/examples/js/loaders/OBJLoader.js)
 * MTL 材质加载器: [MTLLoader.js](https://github.com/mrdoob/three.js/blob/dev/examples/js/loaders/MTLLoader.js)
 
-### 控制器部分
+### 控制器部分（three/build/three.module）
 * 设备旋转控制器: [DeviceOrientationControls.js](https://github.com/mrdoob/three.js/blob/dev/examples/js/controls/DeviceOrientationControls.js)
 * 拖拽控制器: [DragControls.js](https://github.com/mrdoob/three.js/blob/dev/examples/js/controls/DragControls.js)
 * 编辑控制器: [EditorControls.js](https://github.com/mrdoob/three.js/blob/dev/examples/js/controls/EditorControls.js)

@@ -1,20 +1,15 @@
 import * as THREE from 'three'
 import Stats from '@libs/stats'
 import '@libs/OrbitControls'
-import * as dat from 'dat.gui'
+import * as myGUI from '@utils/myGUI'
 
 // 其他工具 - 展示 fps
 const stats = new Stats()
 stats.showPanel(0)
 document.body.appendChild(stats.dom)
 
-// 其他工具 - 提供 UI 进行变量调整
-const guiControl = { rotationSpeed: 0.01 }
-const gui = new dat.GUI()
-gui.domElement.style.position = 'absolute'
-gui.domElement.style.right = '0'
-gui.add(guiControl, 'rotationSpeed', 0.001, 0.1)
-document.body.appendChild(gui.domElement)
+// gui
+const gui = myGUI.createGUI()
 
 // 场景
 const scene = new THREE.Scene()
@@ -35,6 +30,8 @@ camera.position.x = -30
 camera.position.y = 40
 camera.position.z = 30
 camera.lookAt(scene.position)
+camera.name = 'camera'
+myGUI.addPerspectiveCameraGUI(gui, camera)
 
 // 添加一个平面
 const planeGeometry = new THREE.PlaneGeometry(60, 40, 1, 1)
@@ -71,12 +68,23 @@ while (cubeCount++ < MAX_CUBE) {
 
 // 光源 - 环境光
 const ambientLight = new THREE.AmbientLight(0x0c0c0c)
+ambientLight.name = 'ambientLight'
 scene.add(ambientLight)
+myGUI.addLightGUI(gui, ambientLight)
 
 // 光源 - 聚光灯
 const spotLight = new THREE.SpotLight(0xffffff)
+spotLight.name = 'spotLight'
 spotLight.position.set(25, 25, 25)
 scene.add(spotLight)
+myGUI.addSpotLightGUI(gui, spotLight)
+
+// 辅助线
+const spotLightHelper = new THREE.SpotLightHelper(spotLight)
+scene.add(spotLightHelper)
+
+const axesHelper = new THREE.AxesHelper(100)
+scene.add(axesHelper)
 
 // 渲染动画
 const animate = function () {
