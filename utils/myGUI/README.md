@@ -31,5 +31,22 @@ myGUI.addSpotLightGUI(gui, spotLight)
 myGUI.addPerspectiveCameraGUI(gui, camera)
 ```
 
+## 图例
+* myGUI.addObject3DGUI(gui, object3d)
+
+    ![](./assets/object3d.png)
+
+* myGUI.addLightGUI(gui, light)
+
+    ![](./assets/light.png)
+
+* myGUI.addSpotLightGUI(gui, light)
+
+    ![](./assets/spotlight.png)
+
+* myGUI.addPerspectiveCameraGUI(gui, light)
+
+    ![](./assets/camera.png)
+
 ## 其他说明
 * myGUI.createGUI() 返回的 GUI 对象是普通的 [dat.gui](https://github.com/dataarts/dat.gui/) 对象，可以直接参考 [dat.gui](https://github.com/dataarts/dat.gui/) 文档使用
