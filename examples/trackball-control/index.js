@@ -89,6 +89,10 @@ const axesHelper = new THREE.AxesHelper(100)
 scene.add(axesHelper)
 
 //
+const render = () => renderer.render(scene, camera)
+render()
+
+//
 const controls = new THREE.TrackballControls(camera)
 controls.rotateSpeed = 1.0
 controls.zoomSpeed = 1.2
@@ -97,21 +101,8 @@ controls.noZoom = false
 controls.noPan = false
 controls.staticMoving = true
 controls.dynamicDampingFactor = 0.3
-
-// 拖拽控件
-const dragControls = new THREE.DragControls(object, camera, renderer.domElement)
-dragControls.addEventListener('dragstart', function () {
-    controls.enabled = false
-})
-dragControls.addEventListener('dragend', function () {
-    controls.enabled = true
-})
-
-//
-const render = () => {
-    controls.update()
-    renderer.render(scene, camera)
-}
+controls.keys = [ 65, 83, 68 ]
+controls.addEventListener('change', render)
 
 // 渲染动画
 const animate = function () {
@@ -125,7 +116,8 @@ const animate = function () {
             e.rotation.z += 0.01
         }
     })
-    render()
+
+    controls.update()
     stats.end()
 }
 animate()
